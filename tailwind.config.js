@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Kanit: ['Kanit', 'sans-serif'],
+      },
+      backgroundColor: {
+        'cool-gray-900': '#121f21',
+      },
+    },
   },
   plugins: [require("daisyui")],
 }

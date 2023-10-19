@@ -1,10 +1,18 @@
 import React from 'react';
+import Banner from '../Homepage/Banner/Banner';
+import BrandsHome from '../Homepage/Other/BrandsHome';
+import Terms from '../Homepage/Other/Terms';
 
 const Home = () => {
     return (
         <div>
-            <h1>This is HOmepage </h1>
+ <Banner></Banner>
+        <BrandsHome></BrandsHome>
+        <Terms></Terms>
         </div>
+       
+
+        
     );
 };
 

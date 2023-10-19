@@ -25,6 +25,16 @@ import About from './components/Page/About';
 import Register from './components/Authentication/Register';
 import Login from './components/Authentication/Login';
 
+//Brand 
+
+import Amazon from './components/Brand/Amazon';
+import Apple from './components/Brand/Apple';
+import Google from './components/Brand/Google';
+import Intel from './components/Brand/Intel';
+import Samsung from './components/Brand/Samsung';
+import Sony from './components/Brand/Sony';
+
+
 
 
 const router = createBrowserRouter([
@@ -49,6 +59,30 @@ const router = createBrowserRouter([
       {
         path:'/about',
         element:<About></About>
+      },
+      {
+        path:'/brand/amazon',
+        element:<Amazon></Amazon>
+      },
+      {
+        path:'/brand/apple',
+        element:<Apple></Apple>
+      },
+      {
+        path:'/brand/google',
+        element:<Google></Google>
+      },
+      {
+        path:'/brand/intel',
+        element:<Intel></Intel>
+      },
+      {
+        path:'/brand/samsung',
+        element:<Samsung></Samsung>
+      },
+      {
+        path:'/brand/sony',
+        element:<Sony></Sony>
       }
     ]
   },

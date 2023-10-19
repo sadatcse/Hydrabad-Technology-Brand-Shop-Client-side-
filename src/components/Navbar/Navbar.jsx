@@ -23,10 +23,6 @@ const Navbar = () => {
     const navlinks = <> 
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
-    <li><NavLink to="/about">Service</NavLink></li>
-    <li><NavLink to="/about">Portfolio</NavLink></li>
-    <li><NavLink to="/about">FAQ</NavLink></li>
-    <li><NavLink to="/about">Contact</NavLink></li>
     <li><NavLink to="/register">Registration</NavLink></li>
     { user && <>
             <li><NavLink to="/about">Profile</NavLink></li>
