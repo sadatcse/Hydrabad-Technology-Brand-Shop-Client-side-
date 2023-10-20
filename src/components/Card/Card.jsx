@@ -11,7 +11,7 @@ const Card = ({ item }) => {
         const adduserid = userUid;
 
         console.log(addProductid);
-        console.log(adduserid);
+        console.log(addProductid);
     
         // Construct the cart object with the userUid
         const cart = {
