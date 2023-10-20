@@ -25,10 +25,11 @@ const Navbar = () => {
     <li><NavLink to="/about">About</NavLink></li>
     <li><NavLink to="/register">Registration</NavLink></li>
     { user && <>
-            <li><NavLink to="/about">Profile</NavLink></li>
-            <li><NavLink to="/about">Dashboard</NavLink></li>
+            <li><NavLink to="/about">Add Product </NavLink></li>
+            <li><NavLink to="/about">My Cart</NavLink></li>
         </>}
     </>
+
 
     return (
         <div className="navbar bg-base-100 border-solid border-2 border-gray-100">

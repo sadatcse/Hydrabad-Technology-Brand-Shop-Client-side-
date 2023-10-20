@@ -12,7 +12,12 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-
+    const [Brands, setBrands] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/brands')
+            .then(res => res.json())
+            .then(data => setBrands(data));
+    }, [])
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -47,6 +52,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     const authInfo = { 
+        Brands,
         user, 
         loading,
         createUser, 

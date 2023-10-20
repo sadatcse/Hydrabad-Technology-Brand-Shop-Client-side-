@@ -4,7 +4,9 @@ import { Toaster } from 'react-hot-toast';
 import Copyright from './Footer/Copyright';
 import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
+
 const Root = () => {
+ 
     return (
         <div>
             <Navbar></Navbar>
