@@ -5,10 +5,12 @@ import Copyright from './Footer/Copyright';
 import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
 
+import './root.css';
+
 const Root = () => {
- 
+
     return (
-        <div>
+        <div >
             <Navbar></Navbar>
             <Toaster />
             <Outlet></Outlet>

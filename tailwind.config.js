@@ -17,3 +17,15 @@ export default {
   plugins: [require("daisyui")],
 }
 
+// module.exports = {
+//   // ... other config options ...
+
+//   darkMode: 'class', // Enable dark mode as a CSS class
+//   // ...
+// };
+
+
+
+
+
+

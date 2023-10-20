@@ -1,10 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-
-
 // Import React Router dom 
-
 
 import {
   createBrowserRouter,
@@ -28,9 +25,8 @@ import Login from './components/Authentication/Login';
 //Brand 
 
 import Brand from './components/Brand/Brand';
-
-
-
+import AddProduct from './components/Dashboard/AddProduct';
+import Cart from './components/Dashboard/Cart';
 
 
 const router = createBrowserRouter([
@@ -47,6 +43,14 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/addproduct',
+        element:<AddProduct></AddProduct>,
+      },
+      {
+        path:'/cart',
+        element:<Cart></Cart>
       },
       {
         path: '/register',
@@ -68,7 +72,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      
       <RouterProvider router={router} />
       </AuthProvider>
       </React.StrictMode>,

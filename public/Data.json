@@ -1,0 +1,36 @@
+[{
+    "userUid": "XjWLQZs6ISMP3o97SHnmeXdggmD2",
+    "cart": [
+      {
+        "productId": "product1",
+        "quantity": 2
+      },
+      {
+        "productId": "product2",
+        "quantity": 1
+      }]
+    
+  },
+{
+  "userUid": "XjWLQZs6ISMP3o97SHnmeXdggmD25",
+  "cart": [
+    {
+      "productId": "product1",
+      "quantity": 2
+    },
+    {
+      "productId": "product2",
+      "quantity": 1
+    }]
+  
+}
+
+
+
+
+
+
+
+
+]
+
