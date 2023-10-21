@@ -83,7 +83,7 @@ const Register = () => {
             const uid =result.user?.uid
             const user = { uid,mobile,gender,dateOfBirth,education,streetName,streetNumber,area,town,postCode};
 
-            fetch('http://localhost:5000/user', {
+            fetch('https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

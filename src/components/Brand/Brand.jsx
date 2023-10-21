@@ -9,7 +9,7 @@ const Brand = () => {
     const [branddata, setBrandData] = useState(null);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/brands/${brand}`)
+        fetch(`https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/brands/${brand}`)
             .then(response => response.json())
             .then(data => setBrandData(data));});
 

@@ -21,7 +21,7 @@ const Addtocart = (Productid, useremail,Productname) => {
 
   console.log(cart);
 
-  fetch('http://localhost:5000/cart', {
+  fetch('https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/cart', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'

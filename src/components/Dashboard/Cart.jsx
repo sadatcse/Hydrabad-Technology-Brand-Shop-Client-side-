@@ -25,7 +25,7 @@ const Cart = () => {
           productId: productId,
         };
       
-        fetch('http://localhost:5000/cart/delete', {
+        fetch('https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/cart/delete', {
           method: 'POST', // Use POST method for deleting
           headers: {
             'Content-Type': 'application/json',

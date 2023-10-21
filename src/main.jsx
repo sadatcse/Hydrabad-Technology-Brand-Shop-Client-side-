@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path:'/cart',
         element:<PrivateRoot><Cart></Cart></PrivateRoot>,
-        loader: () => fetch('http://localhost:5000/cart')
+        loader: () => fetch('https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/cart')
       },
       {
         path: '/register',
@@ -69,18 +69,18 @@ const router = createBrowserRouter([
       {
         path: '/brand/:brand',
         element: <Brand></Brand>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/brand/${params.brand}`)
+        loader: ({ params }) => fetch(`https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/product/brand/${params.brand}`)
 
       },
       { 
         path: '/updateproduct/:id',
         element: <PrivateRoot><Updateproduct></Updateproduct></PrivateRoot>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)   
+        loader: ({ params }) => fetch(`https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/product/${params.id}`)   
       },
       { 
         path: '/product/:id',
         element: <PrivateRoot><DetailsPage></DetailsPage></PrivateRoot>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)   
+        loader: ({ params }) => fetch(`https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/product/${params.id}`)   
       },
     ]
   },

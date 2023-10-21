@@ -50,7 +50,7 @@ const Updateproduct = () => {
 
         console.log(updateproduct);
  
-        fetch(`http://localhost:5000/products/id/${productid}`, {
+        fetch(`https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/products/id/${productid}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
