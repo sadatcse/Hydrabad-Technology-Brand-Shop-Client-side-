@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [Brands, setBrands] = useState([]);
     useEffect(() => {
-        fetch('https://h-technology-server-f37hhlhr4-sadatcses-projects.vercel.app/brands')
+        fetch('https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/brands')
             .then(res => res.json())
             .then(data => setBrands(data));
     }, [])
