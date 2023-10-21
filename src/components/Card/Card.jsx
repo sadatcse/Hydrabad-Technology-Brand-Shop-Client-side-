@@ -28,7 +28,7 @@ const Card = ({ item }) => {
         <Link to={`/product/${item.product_id}`}> <button className="btn btn-primary" style={{ backgroundColor: item.ButtonColor }}>
             Details
           </button></Link>
-          <Link to="/login"><button className="btn btn-secondary">
+          <Link to={`/updateproduct/${item.product_id}`}><button className="btn btn-secondary">
             Update
           </button></Link>
         </div>

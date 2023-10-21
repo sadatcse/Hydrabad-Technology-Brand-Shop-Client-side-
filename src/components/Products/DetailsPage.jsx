@@ -5,38 +5,34 @@ import { displayStars as ratings } from '../Utilis/Start';
 import toast from 'react-hot-toast';
 const DetailsPage  = () => {
     const Product = useLoaderData();
-    const { user, loading } = useContext(AuthContext);
-    console.log(user);
+    const { user} = useContext(AuthContext);
+
     const useremail = user?.email;
+
     const ratingString = ratings(Product[0].ratings.average);
 
+// Cart function 
 
-    const Addtocart = (Productid, useremail) => {
-      const addProductid = Productid;
-      const adduserid = useremail;
-      console.log(adduserid);
-      console.log(addProductid); 
+const Addtocart = (Productid, useremail,Productname) => {
+  const cart = {
+      userEmail: useremail,  
+      cart: [{ productId: Productid, ProductName: Productname, quantity: 1 }] 
+  };
 
-      const cart = {
-          useremail: adduserid, 
-          cart: [{ productId: addProductid, quantity: 1 }] 
-      };
-  
-      // Send a POST request to the server
-      fetch('http://localhost:5000/cart', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(cart)
-      })
-      .then(res => res.json())
-      .then(data => {
-          if (data._id) {
-              toast.success("Product added to cart");
-          }
-      });
-  }
+  console.log(cart);
+
+  fetch('http://localhost:5000/cart', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(cart)
+  })
+  .then(res => res.json())
+  .then(data => {
+    toast.success("Product added to cart");
+  });
+}
 
 
   return (
@@ -65,7 +61,7 @@ const DetailsPage  = () => {
               ))}
             </ul>
           </div>
-          <button onClick={() => Addtocart(Product[0].product_id,useremail)}
+          <button onClick={() => Addtocart(Product[0].product_id,useremail,Product[0].name)}
             className="mt-4 bg-red-600 text-white py-2 px-4 rounded-full hover:bg-red-700"
             style={{ backgroundColor: Product[0].ButtonColor }}
           >

@@ -50,10 +50,17 @@ const AddProduct = () => {
         })
         .then(res => res.json())
         .then(data => {
-            if (data._id) {
-                toast.success("Product added successful!")
+          if (data.success) {
+            // Product successfully deleted
+            toast.success('Product Add to Database'); }
+            else {
+              // Handle errors here, e.g., product not found, server error, etc.
+              toast.error('Product Failed to add');
             }
-        });
+
+
+          })
+        ;
 
     }
     return (
