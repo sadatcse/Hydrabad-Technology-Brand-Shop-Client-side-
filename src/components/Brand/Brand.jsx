@@ -30,12 +30,18 @@ const Brand = () => {
 
     return (
         <div>
-            <FullBanner image1={image1} image2={image2} image3={image3} image4={image4}/>
-            <p className='font-sans	text-4xl font-bold text-center text-blue-600 my-5'>All {BrandName} Product</p>
-            <div className="grid grid-cols-4 gap-2 ms-5">
-                {productdata.map((product) => <Card item={product}></Card>)}
-            </div>
+    <FullBanner image1={image1} image2={image2} image3={image3} image4={image4}/>
+    <p className='font-sans text-4xl font-bold text-center text-blue-600 my-5'>All {BrandName} Product</p>
+    {productdata.length === 0 ? (
+        <div className='text-center'>
+            <p className='text-center text-4xl font-bold text-black my-10'>No Product Found On this Brand. Please Try Again later.</p>
         </div>
+    ) : (
+        <div className="grid gap-2 ms-5 sm:grid-cols-1 md:grid-cols-4">
+            {productdata.map((product) => <Card item={product} key={product.id} />)}
+        </div>
+    )}
+</div>
     );
 };
 

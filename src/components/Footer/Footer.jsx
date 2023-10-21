@@ -20,12 +20,12 @@ const Footer = () => {
           
         </aside> 
         <nav className='mx-8'>
-          <header className="footer-title text-2xl text-black font-bold">Services</header> 
+          <header className="footer-title text-2xl text-black font-bold">Brand</header> 
                 
-                 <Link to="/service/01"><a className="link link-hover text-black">Venue Booking</a></Link> 
-                 <Link to="/service/06"><a className="link link-hover text-black">Live Entertainment</a></Link>
-                 <Link to="/service/01"><a className="link link-hover text-black">Invitation Design & Printing</a></Link>
-                 <Link to="/service/04"><a className="link link-hover text-black">Catering & Food Presentation</a></Link>
+                 <Link to=""><a className="link link-hover text-black">Apple</a></Link> 
+                 <Link to=""><a className="link link-hover text-black">Samsumg</a></Link>
+                 <Link to=""><a className="link link-hover text-black">Sony</a></Link>
+                 <Link to=""><a className="link link-hover text-black">Google</a></Link>
         </nav> 
         <nav className='mx-8'>
           <header className="footer-title text-2xl text-black font-bold text-black">Company</header> 
