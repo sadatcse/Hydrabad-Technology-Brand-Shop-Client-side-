@@ -1,23 +1,25 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from "../../providers/AuthProvider";
-
+import { displayStars as ratings } from '../Utilis/Start';
+import toast from 'react-hot-toast';
 const DetailsPage  = () => {
     const Product = useLoaderData();
     const { user, loading } = useContext(AuthContext);
-    const userUid = user?.uid;
+    console.log(user);
+    const useremail = user?.email;
+    const ratingString = ratings(Product[0].ratings.average);
 
-    const Addtocart = (Productid, userUid) => {
+
+    const Addtocart = (Productid, useremail) => {
       const addProductid = Productid;
-      const adduserid = userUid;
+      const adduserid = useremail;
+      console.log(adduserid);
+      console.log(addProductid); 
 
-      console.log(addProductid);
-      console.log(addProductid);
-  
-      // Construct the cart object with the userUid
       const cart = {
-          userUid: adduserid,
-          cart: [{ productId: addProductid, quantity: 1 }] // Initial quantity is 1
+          useremail: adduserid, 
+          cart: [{ productId: addProductid, quantity: 1 }] 
       };
   
       // Send a POST request to the server
@@ -31,7 +33,7 @@ const DetailsPage  = () => {
       .then(res => res.json())
       .then(data => {
           if (data._id) {
-              console.log('Product added to the cart');
+              toast.success("Product added to cart");
           }
       });
   }
@@ -51,8 +53,8 @@ const DetailsPage  = () => {
           <p className="text-xl font-semibold text-red-600">Special Price :${Product[0]['Special Price']}</p>
           <p className="text-md text-gray-600">Regular Price :${Product[0]['Regular Price']}</p>
           <div className="flex items-center mt-4">
-            <div className="bg-red-600 text-white px-3 py-1 rounded-full">{Product[0].ratings.average}</div>
-            <span className="ml-2 text-gray-500">{Product[0].ratings.count} ratings</span>
+            <div className="text-yellow-400 px-3 py-1 rounded-full text-4xl">{ratingString}</div>
+            <span className="ml-2 text-gray-500 ">({Product[0].ratings.count})</span> 
           </div>
           <p className="mt-4">{Product[0].Specification}</p>
           <div className="mt-4">
@@ -63,7 +65,7 @@ const DetailsPage  = () => {
               ))}
             </ul>
           </div>
-          <button onClick={() => Addtocart(Product[0].product_id,userUid)}
+          <button onClick={() => Addtocart(Product[0].product_id,useremail)}
             className="mt-4 bg-red-600 text-white py-2 px-4 rounded-full hover:bg-red-700"
             style={{ backgroundColor: Product[0].ButtonColor }}
           >

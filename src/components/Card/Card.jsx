@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ item }) => {
 
-    
+   
     return (
 <div className="col-span-1" key={item.product_id}>
   <div className="card w-96 bg-base-100 shadow-xl">
