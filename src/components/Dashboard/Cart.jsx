@@ -25,7 +25,7 @@ const Cart = () => {
           productId: productId,
         };
       
-        fetch('https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/cart/delete', {
+        fetch('https://hyderabad-technology-server.vercel.app/cart/delete', {
           method: 'POST', // Use POST method for deleting
           headers: {
             'Content-Type': 'application/json',

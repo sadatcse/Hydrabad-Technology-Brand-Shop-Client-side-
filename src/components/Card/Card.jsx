@@ -6,7 +6,7 @@ const Card = ({ item }) => {
    
     return (
 <div className="col-span-1" key={item.product_id}>
-  <div className="card w-96 bg-base-100 shadow-xl">
+  <div className="card w-96 h-128 bg-base-100 shadow-xl">
     <figure>
       <img className="h-80" src={item.image} alt={item.name} />
     </figure>

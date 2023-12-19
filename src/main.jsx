@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path:'/cart',
         element:<PrivateRoot><Cart></Cart></PrivateRoot>,
-        loader: () => fetch('https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/cart')
+        loader: () => fetch('https://hyderabad-technology-server.vercel.app/cart')
       },
       {
         path: '/register',
@@ -69,18 +69,18 @@ const router = createBrowserRouter([
       {
         path: '/brand/:brand',
         element: <Brand></Brand>,
-        loader: ({ params }) => fetch(`https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/product/brand/${params.brand}`)
+        loader: ({ params }) => fetch(`https://hyderabad-technology-server.vercel.app/product/brand/${params.brand}`)
 
       },
       { 
         path: '/updateproduct/:id',
         element: <PrivateRoot><Updateproduct></Updateproduct></PrivateRoot>,
-        loader: ({ params }) => fetch(`https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/product/${params.id}`)   
+        loader: ({ params }) => fetch(`https://hyderabad-technology-server.vercel.app/product/${params.id}`)   
       },
       { 
         path: '/product/:id',
         element: <PrivateRoot><DetailsPage></DetailsPage></PrivateRoot>,
-        loader: ({ params }) => fetch(`https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/product/${params.id}`)   
+        loader: ({ params }) => fetch(`https://hyderabad-technology-server.vercel.app/product/${params.id}`)   
       },
     ]
   },

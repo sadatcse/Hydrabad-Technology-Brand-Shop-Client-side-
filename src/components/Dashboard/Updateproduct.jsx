@@ -1,8 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 const Updateproduct = () => {
-
+  const location = useLocation();
+  const navigate = useNavigate();
     const Products = useLoaderData();
     console.log(Products[0]._id);
     const productid=Products[0]._id;
@@ -50,7 +51,7 @@ const Updateproduct = () => {
 
         console.log(updateproduct);
  
-        fetch(`https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/products/id/${productid}`, {
+        fetch(`https://hyderabad-technology-server.vercel.app/products/id/${productid}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -59,8 +60,8 @@ const Updateproduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-              toast.success('Product Add to Database');
-            
+              toast.success('Product Update Sucessful');
+              navigate(location.state?.from || "/");
     
               })
    }

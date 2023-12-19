@@ -41,7 +41,7 @@ const AddProduct = () => {
         ButtonColor: ButtonColor,
         image: image,
     };
-    fetch('https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/product', {
+    fetch('https://hyderabad-technology-server.vercel.app/product', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

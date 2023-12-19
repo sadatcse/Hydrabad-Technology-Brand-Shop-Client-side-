@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      height: {
+        '128': '32rem',
+      },  
       fontFamily: {
         Kanit: ['Kanit', 'sans-serif'],
       },

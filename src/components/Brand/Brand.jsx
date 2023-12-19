@@ -9,7 +9,7 @@ const Brand = () => {
     const [branddata, setBrandData] = useState(null);
     
     useEffect(() => {
-        fetch(`https://h-technology-server-c72odg8xe-sadatcses-projects.vercel.app/brands/${brand}`)
+        fetch(`https://hyderabad-technology-server.vercel.app/brands/${brand}`)
             .then(response => response.json())
             .then(data => setBrandData(data));});
 
